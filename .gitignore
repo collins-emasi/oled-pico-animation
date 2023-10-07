@@ -1,0 +1,8 @@
+# Ignore Visual Studio Code settings folder
+.vscode/
+
+# Ignore pico_env folder
+pico_env/
+
+# Ignore any file that starts with "test"
+test*
