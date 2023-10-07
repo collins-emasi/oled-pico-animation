@@ -6,3 +6,6 @@ pico_env/
 
 # Ignore any file that starts with "test"
 test*
+
+# Environment files
+.micropico
