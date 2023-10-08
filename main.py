@@ -5,11 +5,11 @@ from utime import sleep
 from rita_facial import RitaFacial
 from SSD1306LIB import SSD1306_I2C
 
-ID  = 0
-SDA = Pin(16)
-SCL = Pin(17)
+MODULE  = 1
+SDA = Pin(14)
+SCL = Pin(15)
 
-my_I2C = I2C(id=ID, scl=SCL, sda=SDA)       # type: ignore
+my_I2C = I2C(id=MODULE, scl=SCL, sda=SDA)       # type: ignore
 
 OLED = SSD1306_I2C(width=128, height=64, i2c=my_I2C)
 OLED.init_display()

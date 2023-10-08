@@ -10,17 +10,17 @@ class RitaFacial:
         self.expression_files = []
         self.OLED = OLED
         self.inversion = inversion
-        self.expressions = ['blink', 'smile']
+        self.expressions = [f for f in os.listdir("/frames")]
 
     def get_expression_files(self, expression : str) -> None:
         """
         Curates all the files for the expression desired
         and then sorts the list
-        """
-        files = os.listdir("/")
+        """                                                                                                                                                                   
+        files = os.listdir(f"/frames/{expression}")
         self.expression_files = [file for file in files if file.startswith(expression)]
         self.expression_files.sort()
-
+                                                                                                                                                                                                                         
     def express(self, expression : str) -> None:
         """
         Expresses any of the list of expressions 
