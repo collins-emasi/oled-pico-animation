@@ -17,10 +17,13 @@ OLED.init_display()
 rita = RitaFacial(OLED=OLED, inversion=1)
 
 while True:
-    for _ in range(randint(1, 4)):
-        rita.express("blink")
-        sleep(choice([0.1, 0.5, 0.9, 1.5]))
+    rita.express_random()
+    sleep(choice([0.1, 0.5, 0.9, 1.5]))
+
+    # for _ in range(randint(1, 4)):
+    #     rita.express("blink")
+    #     sleep(choice([0.1, 0.5, 0.9, 1.5]))
     
-    for _ in range(randint(1, 4)):
-        rita.express("smile")
-        sleep(choice([0.1, 0.5, 0.9, 1.5]))
+    # for _ in range(randint(1, 4)):
+    #     rita.express("smile")
+    #     sleep(choice([0.1, 0.5, 0.9, 1.5]))
